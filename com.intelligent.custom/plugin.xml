@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?eclipse version="3.4"?>
+
+<plugin> 
+  <extension point="org.eclipse.ui.commands"> 
+    <command name="工程BOM导出" id="com.intelligent.custom.handlers.ExportBOM"></command>  
+    <command name="工程BOM导出（非标使用模板）" id="com.intelligent.custom.handlers.ExportBOMForNotStandard"></command>  
+    <command name="不分层BOM导出" id="com.intelligent.custom.handlers.ExportBOMForNotStandard_NO_hierarchy"></command>  
+    <command name="分层BOM导出" id="com.intelligent.custom.handlers.ExportfencengBOMNotStandard"></command>  
+    <command name="ERP BOM导出" id="com.intelligent.custom.handlers.ExportERP"></command> 
+    <command name="工程变更单" id="com.intelligent.custom.handlers.ECN"></command> 
+    <command name="ERP原材料导出" id="com.intelligent.custom.handlers.ExportRawMateOfERPBOM"></command>  
+    <command name="物料模板" id="com.intelligent.custom.handlers.ExportMaterialTemplate"></command>  
+    <command name="CAD同步" id="com.intelligent.custom.handlers.UpdateCAD"></command> 
+  </extension>  
+  <extension point="org.eclipse.ui.handlers"> 
+    <handler commandId="com.intelligent.custom.handlers.ExportBOM" class="com.intelligent.custom.handlers.ExportBOM"></handler>  
+    <handler commandId="com.intelligent.custom.handlers.ExportBOMForNotStandard" class="com.intelligent.custom.handlers.ExportBOMForNotStandard"></handler>  
+    <handler commandId="com.intelligent.custom.handlers.ExportBOMForNotStandard_NO_hierarchy" class="com.intelligent.custom.handlers.ExportBOMForNotStandard_NO_hierarchy"></handler>  
+    <handler commandId="com.intelligent.custom.handlers.ExportfencengBOMNotStandard" class="com.intelligent.custom.handlers.ExportfencengBOMNotStandard"></handler>  
+    <handler commandId="com.intelligent.custom.handlers.UpdateCAD" class="com.intelligent.custom.handlers.UpdateCAD"></handler>  
+  	<handler commandId="com.intelligent.custom.handlers.ExportERP" class="com.intelligent.custom.handlers.ExportERP"></handler> 
+  	<handler commandId="com.intelligent.custom.handlers.ECN" class="com.intelligent.custom.handlers.ECN"></handler> 
+    <handler commandId="com.intelligent.custom.handlers.ExportRawMateOfERPBOM" class="com.intelligent.custom.handlers.ExportRawMateOfERPBOM"></handler>  
+    <handler commandId="com.intelligent.custom.handlers.ExportMaterialTemplate" class="com.intelligent.custom.handlers.ExportMaterialTemplate"></handler>  
+  </extension>  
+  <extension point="org.eclipse.ui.menus"> 
+    <menuContribution locationURI="menu:file?before=close.ext"> 
+      <menu label="新增功能" id="com.intelligent.custom.handlers.newFacture"> 
+        <command commandId="com.intelligent.custom.handlers.ExportBOM" id="com.intelligent.custom.handlers.ExportBOM"></command>  
+        <command commandId="com.intelligent.custom.handlers.ExportBOMForNotStandard" id="com.intelligent.custom.handlers.ExportBOMForNotStandard"></command>  
+        <command commandId="com.intelligent.custom.handlers.ExportBOMForNotStandard_NO_hierarchy" id="com.intelligent.custom.handlers.ExportBOMForNotStandard_NO_hierarchy"></command>  
+        <command commandId="com.intelligent.custom.handlers.ExportfencengBOMNotStandard" id="com.intelligent.custom.handlers.ExportfencengBOMNotStandard"></command>  
+      	<command commandId="com.intelligent.custom.handlers.ExportERP" id="com.intelligent.custom.handlers.ExportERP"></command>
+      	<command commandId="com.intelligent.custom.handlers.ECN" id="com.intelligent.custom.handlers.ECN"></command>
+        <command commandId="com.intelligent.custom.handlers.ExportRawMateOfERPBOM" id="com.intelligent.custom.handlers.ExportRawMateOfERPBOM"></command>  
+        <command commandId="com.intelligent.custom.handlers.ExportMaterialTemplate" id="com.intelligent.custom.handlers.ExportMaterialTemplate"></command>  
+        <command commandId="com.intelligent.custom.handlers.UpdateCAD" id="com.intelligent.custom.handlers.UpdateCAD"></command> 
+      </menu> 
+    </menuContribution> 
+  </extension>  
+  <extension point="com.teamcenter.rac.util.tc_properties"></extension> 
+</plugin>
